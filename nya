@@ -3,13 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seu Site com URL Personalizada</title>
+    <title>Link Hider</title>
 </head>
 <body>
-    <!-- URL desejada que será exibida -->
-    <h1>https://entraja</h1>
+    <h1>Clique <a href="#" id="link">aqui</a></h1>
     
-    <!-- iframe oculto que carrega o conteúdo real -->
-    <iframe src="https://shorturl.at/acJ78" style="display:none;"></iframe>
+    <script>
+        // Altere a URL real aqui
+        var realURL = "https://shorturl.at/acJ78";
+        
+        // Altere o texto do link aqui
+        var linkText = "https://entraja";
+        
+        // Adicione evento de clique ao link
+        document.getElementById("link").addEventListener("click", function(e) {
+            e.preventDefault(); // Impede o comportamento padrão do link
+            
+            // Altere a URL exibida
+            window.history.pushState({}, document.title, linkText);
+            
+            // Navega para a URL real
+            window.location.href = realURL;
+        });
+    </script>
 </body>
 </html>
