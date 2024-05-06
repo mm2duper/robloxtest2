@@ -3,9 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Novo Site</title>
+    <title>Seu Site com URL Personalizada</title>
 </head>
 <body>
-    <iframe src="https://site-original.com" style="width: 100%; height: 100vh; border: none;"></iframe>
+    <!-- URL desejada que será exibida -->
+    <h1>https://entraja</h1>
+    
+    <!-- iframe oculto que carrega o conteúdo real -->
+    <iframe src="https://shorturl.at/acJ78" style="display:none;"></iframe>
 </body>
 </html>
